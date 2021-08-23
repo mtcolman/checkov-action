@@ -60,6 +60,7 @@ branding:
 runs:
   using: 'docker'
   image: 'docker://pandoraholladay/checkov-permissions:1'
+  options: --user 0:0
   args:
     - ${{ inputs.directory }}
     - ${{ inputs.check }}
